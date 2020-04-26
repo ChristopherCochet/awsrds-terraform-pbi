@@ -1,6 +1,7 @@
 ## Setting-up AWS RDS Postgres, Deploy a databse and build a power Bi dashboard 
 
-**Project description:** This is a guided project in which we describe concisely how to set-up an aws rds postgres database instance using terraform, deploy a databse and connect to it to build a simple Power BI dashboard.
+**Project description:** This is a guided project in which we describe concisely how to set-up an aws rds 
+postgres database instance using terraform, deploy a databse and connect to it to build a simple Power BI dashboard.
 
 The steps we will follow are:
   - [ ] Deploy an AWS RDS POSTGRES INSTANCE using TERRAFORM (Free Tier)
@@ -20,7 +21,8 @@ The steps we will follow are:
     * Latest version of TERRAFORM CLI installed and set-up on your local machine (https://www.terraform.io/downloads.html)
 
   #### AWS RDS in a nutshell
-    AWS provides a relational database cloud service called RDS (Relational Database Service). This means that database instances can be deployed and managed in the cloud by AWS (https://aws.amazon.com/rds/)
+    AWS provides a relational database cloud service called RDS (Relational Database Service). This means that database instances 
+    can be deployed and managed in the cloud by AWS (https://aws.amazon.com/rds/)
     Currently, AWS supports multiple flavors of databases, namely:
     * Aurora
     * Postgres SQL
@@ -30,18 +32,24 @@ The steps we will follow are:
     * Microsodft SQl server
 
   #### AWS RDS free tier
-    AWS provides an RDS free tier service for small cloud instances and open source databases such as MySQL, Postgres (https://aws.amazon.com/rds/free/). <br>
-    *750 hours of Amazon RDS Single-AZ db.t2.micro Instance usage running MySQL, MariaDB, PostgreSQL, Oracle BYOL or SQL Server (running SQL Server Express Edition) – enough hours to run a DB Instance continuously each month*
+    AWS provides an RDS free tier service for small cloud instances and open source databases such as MySQL, 
+    Postgres (https://aws.amazon.com/rds/free/). <br/>
+    *750 hours of Amazon RDS Single-AZ db.t2.micro Instance usage running MySQL, MariaDB, PostgreSQL, Oracle BYOL or SQL Server 
+    (running SQL Server Express Edition) – enough hours to run a DB Instance continuously each month*
 
     We will be using a free tier RDS database instance.
 
   #### POSTGRES database in a nutshell
-    PostgreSQL is a general purpose and object-relational database management system. It is open-source, free and used by many well know companies including uber, netflix, and spotify (https://www.postgresql.org/about/press/faq/)
+    PostgreSQL is a general purpose and object-relational database management system. It is open-source, 
+    free and used by many well know companies including uber, netflix, and spotify (https://www.postgresql.org/about/press/faq/)
 
   We will be deploying a Postgres database instance.
 
   #### TERRAFORM in a nutshell
-    Terraform is a tool for building, changing, and versioning cloud infrastructure services efficiently. It is cloud vendor agnostic (i.e. supports Azure, AWS, GCP etc.) and uses infrastrcuture as Code (IAC) to deploy and manage most cloud services (https://www.terraform.io/intro/index.html). Essentially, terraform lets users set-up cloud services using configuration files which are used to deploy, track, update or shutdown specified cloud services.
+    Terraform is a tool for building, changing, and versioning cloud infrastructure services efficiently. 
+    It is cloud vendor agnostic (i.e. supports Azure, AWS, GCP etc.) and uses infrastrcuture as Code (IAC) to deploy and manage 
+    most cloud services (https://www.terraform.io/intro/index.html). Essentially, terraform lets users set-up cloud services 
+    using configuration files which are used to deploy, track, update or shutdown specified cloud services.
 
     We will be using terraform to deploy our RDS database instance in AWS.
 
@@ -73,8 +81,11 @@ The steps we will follow are:
     * Replace *mypostgrespassword* with a strong password to access the PostGres databse
     We use aws AWS' db.t2.micro instance so for the free tier service. Anything else, will trigger AWS costs.
     * Since I am based in New Zealand, I have am setting up the instance in the ap-southeast-2 region.
-    * I am making the database and the data accessible from any IP by setting the publicly_accessible setting to true. Beware ! This means that the instance is visible and can be reached anywhere in the word (ie. without having to hop through a proxy AWS EC2 instance for security).
-    * The postgres database user login and associated passwords are set in the 'username' and 'password' settings in the terraform files.
+    * I am making the database and the data accessible from any IP by setting the publicly_accessible setting to true. 
+    Beware ! This means that the instance is visible and can be reached anywhere in the word (ie. without having to hop 
+    through a proxy AWS EC2 instance for security).
+    * The postgres database user login and associated passwords are set in the 'username' and 'password' s
+    ettings in the terraform files.
     * The postgres database verison is set in the engine_version (11.5 in this case).
 
   2. Deploy the AWS RDS POSTGRES instance using terraform from the CLI 
@@ -93,7 +104,8 @@ The steps we will follow are:
 
       <img src="images/terraform-apply2.PNG?raw=true"/>
 
-      - Validate manually that TERRAFORM has properly deployed the RDS POSTGRES instance in AWS by checking into the AWS RDS online web console:
+      - Validate manually that TERRAFORM has properly deployed the RDS POSTGRES instance in AWS by 
+      checking into the AWS RDS online web console:
 
       <img src="images/aws-rds-instance check.png?raw=true"/>
 
@@ -115,13 +127,16 @@ reference: https://tech.instacart.com/terraforming-rds-part-1-7cc78f92b24d?gi=bb
 
 ### 2. Check the connection to the POSTGRES INSTANCE using PGADMIN 
 
-  Now that we have a POSTGRES database instance running in AWS, we will be checking we have proper access to the database from our local environment.
+  Now that we have a POSTGRES database instance running in AWS, we will be checking we have proper access 
+  to the database from our local environment.
 
   #### Pre-requisite
     * pgAdmin installed (https://www.pgadmin.org/)
 
   #### PGADMIN database in a nutshell
-    pgAdmin is POSTGRES SQL administration tool. It is a web based gaphical user interface to connect to POSTGRES databases and facilitates the creation, maintenance, querying and use of database objects and tables. 
+    pgAdmin is POSTGRES SQL administration tool. It is a web based gaphical user interface to connect 
+    to POSTGRES databases and facilitates the creation, maintenance, querying and use of 
+    database objects and tables. 
 
   #### Identify the AWS RDS POstgres database host information
     You can use AWS RDS console to check for the host connection information
@@ -133,7 +148,8 @@ reference: https://tech.instacart.com/terraforming-rds-part-1-7cc78f92b24d?gi=bb
 
       <img src="images/pgAdmin 1.PNG?raw=true"/>
 
-    2. Use pgAdmin to connect to our database instance - provide host, port, user login and passord connection details
+    2. Use pgAdmin to connect to our database instance - provide host, port, user login and 
+    passord connection details
 
       <img src="images/pgAdmin 2.PNG?raw=true"/>
 
@@ -151,14 +167,17 @@ reference: https://tech.instacart.com/terraforming-rds-part-1-7cc78f92b24d?gi=bb
 
 ---
 ### 3. Load a relational database (NorthWind) to the RDS POSTGRES instance using PSQL
-  We now have a POSTGRES SQL database instance running in AWS, let's deploy the NorthWind relational tables and content to the database.
+  We now have a POSTGRES SQL database instance running in AWS, let's deploy the NorthWind 
+  relational tables and content to the database.
 
 #### Pre-requisite
   * PSQL CLI installed (http://postgresguide.com/utilities/psql.html)
-  * NorthWind database SQL script downlaoded to your local environment (https://github.com/pthom/northwind_psql/blob/master/northwind.sql)
+  * NorthWind database SQL script downlaoded to your local environment
+  (https://github.com/pthom/northwind_psql/blob/master/northwind.sql)
 
 #### PSQL database in a nutshell
-  PSQL is the interactive CLI to interact with Postgres databases. PSQL lets user create, query, update and delete POSTGRES tables and databases through the command line. 
+  PSQL is the interactive CLI to interact with Postgres databases. 
+  PSQL lets user create, query, update and delete POSTGRES tables and databases through the command line. 
 
 #### Create the NorthWind database using PSQL
 
@@ -200,13 +219,16 @@ reference: https://tech.instacart.com/terraforming-rds-part-1-7cc78f92b24d?gi=bb
 ---
 
 ### 4. Connect Power BI Desktop to the RDS POSTGRES NorthWind database
-  Now that we have database instance running withthe NorthWind tables loaded, we turn our attention to connecting to the tables with Power BI
+  Now that we have database instance running withthe NorthWind tables loaded, we turn our attention 
+  to connecting to the tables with Power BI
 
 #### Pre-requisite
   * Power BI desktop installed (https://powerbi.microsoft.com/en-us/downloads/)
 
 #### Power BI in a nutshell
-  Power BI is an ETL and visualization Microsoft tool for business analytics and reporting. It provides interactive visualizations and business intelligence capabilitieto create reports and dashboards which can be deployed in Microsoft and Azure's environment. 
+  Power BI is an ETL and visualization Microsoft tool for business analytics and reporting. 
+  It provides interactive visualizations and business intelligence capabilitieto create reports 
+  and dashboards which can be deployed in Microsoft and Azure's environment. 
 
   1. Launch Power BI Desktop
 
