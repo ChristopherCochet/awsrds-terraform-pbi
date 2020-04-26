@@ -3,12 +3,14 @@
 **Project description:** This is a guided project in which we describe concisely how to set-up an aws rds postgres database instance using terraform, deploy a databse and connect to it to build a simple Power BI dashboard.
 
 The steps we will follow are:
-[ ] Deploy an AWS RDS POSTGRES INSTANCE using TERRAFORM (Free Tier)
-[ ] Check connection to the POSTGRES INSTANCE using PGADMIN 
-[ ] Load a relational database (NorthWind) to the RDS POSTGRES instance using PSQL
-[ ] Connect Power BI Desktop to the RDS POSTGRES NorthWind database
-[ ] Build a Simple Power BI Dashboard using the NorthWind dabase
-[ ] Deploy the Power BI dashboard
+- [ ] Deploy an AWS RDS POSTGRES INSTANCE using TERRAFORM (Free Tier)
+- [ ] Check connection to the POSTGRES INSTANCE using PGADMIN 
+- [ ] Load a relational database (NorthWind) to the RDS POSTGRES instance using PSQL
+- [ ] Connect Power BI Desktop to the RDS POSTGRES NorthWind database
+- [ ] Build a Simple Power BI Dashboard using the NorthWind dabase
+- [ ] Deploy the Power BI dashboard
+
+---
 
 ### 1. Deploy an AWS RDS POSTGRES INSTANCE using TERRAFORM (Free Tier)
 
@@ -28,7 +30,7 @@ Currently, AWS supports multiple flavors of databases, namely:
 * Microsodft SQl server
 
 #### AWS RDS free tier
-AWS provides an RDS free tier service for small cloud instances and open source databases such as MySQL, Postgres (https://aws.amazon.com/rds/free/). 
+AWS provides an RDS free tier service for small cloud instances and open source databases such as MySQL, Postgres (https://aws.amazon.com/rds/free/). <br>
 *750 hours of Amazon RDS Single-AZ db.t2.micro Instance usage running MySQL, MariaDB, PostgreSQL, Oracle BYOL or SQL Server (running SQL Server Express Edition) – enough hours to run a DB Instance continuously each month*
 
 We will be using a free tier RDS database instance.
@@ -83,7 +85,7 @@ We use aws AWS' db.t2.micro instance so for the free tier service. Anything else
 - Check what TERRAFORM is planning to deploy in AWS using the following command:
 ``` terraform plan ```
 
-<img src="images/init.PNG?raw=true"/>
+<img src="images/terraform-plan.PNG?raw=true"/>
 
 - Deploy our RDS POSTGRES instance in AWS using:
 ``` terraform deploy ```
@@ -94,23 +96,24 @@ We use aws AWS' db.t2.micro instance so for the free tier service. Anything else
 
 <img src="images/terraform-apply2.PNG?raw=true"/>
 
-- Validate manually validate that TERRAFORM has properly deployed the RDS POSTGRES instance in AWS bu checking into the AWS RDS online web console:
+- Validate manually that TERRAFORM has properly deployed the RDS POSTGRES instance in AWS by checking into the AWS RDS online web console:
 
-<img src="images/aws-rds-instance check.PNG?raw=true"/>
+<img src="images/aws-rds-instance check.png?raw=true"/>
 
 **Remember to release the RDS instance once you are finished to avoid running out of AWS free tier resource !**
 Use the following command to shut down the database instance :
 ``` terraform destroy ```
 
-[X] Deploy an AWS RDS POSTGRES INSTANCE using TERRAFORM (Free Tier)
-[ ] Check connection to the POSTGRES INSTANCE using PGADMIN 
-[ ] Load a relational database (NorthWind) to the RDS POSTGRES instance using PSQL
-[ ] Connect Power BI Desktop to the RDS POSTGRES NorthWind database
-[ ] Build a Simple Power BI Dashboard using the NorthWind dabase
-[ ] Deploy the Power BI dashboard
+- [X] Deploy an AWS RDS POSTGRES INSTANCE using TERRAFORM (Free Tier)
+- [ ] Check connection to the POSTGRES INSTANCE using PGADMIN 
+- [ ] Load a relational database (NorthWind) to the RDS POSTGRES instance using PSQL
+- [ ] Connect Power BI Desktop to the RDS POSTGRES NorthWind database
+- [ ] Build a Simple Power BI Dashboard using the NorthWind dabase
+- [ ] Deploy the Power BI dashboard
 
 reference: https://tech.instacart.com/terraforming-rds-part-1-7cc78f92b24d?gi=bbb72a10f9d1
 
+---
 
 ### 2. Check the connection to the POSTGRES INSTANCE using PGADMIN 
 
@@ -122,7 +125,12 @@ Now that we have a POSTGRES database instance running in AWS, we will be checkin
 #### PGADMIN database in a nutshell
 pgAdmin is POSTGRES SQL administration tool. It is a web based gaphical user interface to connect to POSTGRES databases and facilitates the creation, maintenance, querying and use of database objects and tables. 
 
-### Connect to the newly created AWS RDS POSTGRES instance 
+#### Identify the AWS RDS POstgres database host information
+You can use AWS RDS console to check for the host connection information
+
+<img src="images/AWS RDS Console.PNG?raw=true"/>
+
+#### Connect to the newly created AWS RDS POSTGRES instance 
 1. Use pgAdmin to connect to our database instance - create a server
 
 <img src="images/pgAdmin 1.PNG?raw=true"/>
@@ -136,13 +144,14 @@ pgAdmin is POSTGRES SQL administration tool. It is a web based gaphical user int
 <img src="images/pgAdmin 3.PNG?raw=true"/>
 
 
-[X] Deploy an AWS RDS POSTGRES INSTANCE using TERRAFORM (Free Tier)
-[X] Check connection to the POSTGRES INSTANCE using PGADMIN 
-[ ] Load a relational database (NorthWind) to the RDS POSTGRES instance using PSQL
-[ ] Connect Power BI Desktop to the RDS POSTGRES NorthWind database
-[ ] Build a Simple Power BI Dashboard using the NorthWind dabase
-[ ] Deploy the Power BI dashboard
+- [X] Deploy an AWS RDS POSTGRES INSTANCE using TERRAFORM (Free Tier)
+- [X] Check connection to the POSTGRES INSTANCE using PGADMIN 
+- [ ] Load a relational database (NorthWind) to the RDS POSTGRES instance using PSQL
+- [ ] Connect Power BI Desktop to the RDS POSTGRES NorthWind database
+- [ ] Build a Simple Power BI Dashboard using the NorthWind dabase
+- ] Deploy the Power BI dashboard
 
+---
 ### 3. Load a relational database (NorthWind) to the RDS POSTGRES instance using PSQL
 
 We now have a POSTGRES SQL database instance running in AWS, let's deploy the NorthWind relational tables and content to the database.
@@ -186,12 +195,14 @@ psql -h dsdj-postgres-db.clpvihbunw2c.ap-southeast-2.rds.amazonaws.com -U postgr
 <img src="images/PSQL 3.PNG?raw=true"/>
 
 
-[X] Deploy an AWS RDS POSTGRES INSTANCE using TERRAFORM (Free Tier)
-[X] Check connection to the POSTGRES INSTANCE using PGADMIN 
-[X] Load a relational database (NorthWind) to the RDS POSTGRES instance using PSQL
-[ ] Connect Power BI Desktop to the RDS POSTGRES NorthWind database
-[ ] Build a Simple Power BI Dashboard using the NorthWind dabase
-[ ] Deploy the Power BI dashboard
+- [X] Deploy an AWS RDS POSTGRES INSTANCE using TERRAFORM (Free Tier)
+- [X] Check connection to the POSTGRES INSTANCE using PGADMIN 
+- [X] Load a relational database (NorthWind) to the RDS POSTGRES instance using PSQL
+- [ ] Connect Power BI Desktop to the RDS POSTGRES NorthWind database
+- [ ] Build a Simple Power BI Dashboard using the NorthWind dabase
+- [ ] Deploy the Power BI dashboard
+
+---
 
 ### 4. Connect Power BI Desktop to the RDS POSTGRES NorthWind database
 Now that we have database instance running withthe NorthWind tables loaded, we turn our attention to connecting to the tables with Power BI
@@ -203,23 +214,29 @@ Now that we have database instance running withthe NorthWind tables loaded, we t
 Power BI is an ETL and visualization Microsoft tool for business analytics and reporting. It provides interactive visualizations and business intelligence capabilitieto create reports and dashboards which can be deployed in Microsoft and Azure's environment. 
 
 1. Launch Power BI Desktop
+
 <img src="images/power bi 1.PNG?raw=true"/>
 
-2. Connect to the POSTGRES NorthWind database 
+2. Connect to the POSTGRES NorthWind database using AWS host connection information
+
 <img src="images/power bi 2.PNG?raw=true"/>
+
 <img src="images/power bi 3.PNG?raw=true"/>
+
 <img src="images/power bi 4.PNG?raw=true"/>
 
 3. Load to the POSTGRES NorthWind tables 
+
 <img src="images/power bi 5.PNG?raw=true"/>
+
 <img src="images/power bi 6.PNG?raw=true"/>
 
-[X] Deploy an AWS RDS POSTGRES INSTANCE using TERRAFORM (Free Tier)
-[X] Check connection to the POSTGRES INSTANCE using PGADMIN 
-[X] Load a relational database (NorthWind) to the RDS POSTGRES instance using PSQL
-[X] Connect Power BI Desktop to the RDS POSTGRES NorthWind database
-[ ] Build a Simple Power BI Dashboard using the NorthWind dabase
-[ ] Deploy the Power BI dashboard
+- [X] Deploy an AWS RDS POSTGRES INSTANCE using TERRAFORM (Free Tier)
+- [X] Check connection to the POSTGRES INSTANCE using PGADMIN 
+- [X] Load a relational database (NorthWind) to the RDS POSTGRES instance using PSQL
+- [X] Connect Power BI Desktop to the RDS POSTGRES NorthWind database
+- [ ] Build a Simple Power BI Dashboard using the NorthWind dabase
+- [ ] Deploy the Power BI dashboard
 
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
