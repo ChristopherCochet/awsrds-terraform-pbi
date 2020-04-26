@@ -87,7 +87,7 @@ Let's deploy our RDS POSTGRES instance in AWS using 'terraform apply'
 <img src="images/terraform-apply.PNG?raw=true"/>
 
 Let's validate manually validate that TERRAFORM has properly deployed the RDS POSTGRES instance in AWS bu checking into the AWS RDS online web console:
-<img src="images/aws-rds-instance check.png?raw=true"/>
+<img src="images/aws-rds-instance check.PNG?raw=true"/>
 
 - [X] Deploy an AWS RDS POSTGRES INSTANCE using TERRAFORM (Free Tier)
 - [ ] Check connection to the POSTGRES INSTANCE using PGADMIN 
@@ -111,13 +111,13 @@ pgAdmin is POSTGRES SQL administration tool. It is a web based gaphical user int
 
 ## Connect to the newly created AWS RDS POSTGRES instance 
 1. Use pgAdmin to connect to our database instance - create a server
-<img src="images/pgAdmnin 1.png?raw=true"/>
+<img src="images/pgAdmin 1.PNG?raw=true"/>
 
 2. Use pgAdmin to connect to our database instance - provide host, port, user login and passord connection details
-<img src="images/pgAdmnin 2.png?raw=true"/>
+<img src="images/pgAdmin 2.PNG?raw=true"/>
 
 3. Check that you can see the live connection in the pgAdmin UI
-<img src="images/pgAdmnin 3.png?raw=true"/>
+<img src="images/pgAdmin 3.PNG?raw=true"/>
 
 
 - [X] Deploy an AWS RDS POSTGRES INSTANCE using TERRAFORM (Free Tier)
@@ -146,13 +146,13 @@ Create the NorthWind database
 ```
 psql -h dsdj-postgres-db.clpvihbunw2c.ap-southeast-2.rds.amazonaws.com -U postgres -p 5432 -c "CREATE DATABASE \"NorthWind\";"
 ```
-<img src="images/PSQL 1.png?raw=true"/>
+<img src="images/PSQL 1.PNG?raw=true"/>
 
 Create the NorthWind tables
 ```
 psql -h dsdj-postgres-db.clpvihbunw2c.ap-southeast-2.rds.amazonaws.com -U postgres -p 5432 -d NorthWind < northwind.sql
 ```
-<img src="images/PSQL 2.png?raw=true"/>
+<img src="images/PSQL 2.PNG?raw=true"/>
 
 2. Check that the NorthWind database was properly created with PGADMIN or PSQL
 
@@ -162,7 +162,7 @@ psql -h dsdj-postgres-db.clpvihbunw2c.ap-southeast-2.rds.amazonaws.com -U postgr
 ```
 
 PGADMIN
-<img src="images/PSQL 3.png?raw=true"/>
+<img src="images/PSQL 3.PNG?raw=true"/>
 
 
 - [X] Deploy an AWS RDS POSTGRES INSTANCE using TERRAFORM (Free Tier)
@@ -182,16 +182,16 @@ Now that we have database instance running withthe NorthWind tables loaded, we t
 Power BI is an ETL and visualization Microsoft tool for business analytics and reporting. It provides interactive visualizations and business intelligence capabilitieto create reports and dashboards which can be deployed in Microsoft and Azure's environment. 
 
 1. Launch Power BI Desktop
-<img src="images/power bi 1.png?raw=true"/>
+<img src="images/power bi 1.PNG?raw=true"/>
 
 2. Connect to the POSTGRES NorthWind database 
-<img src="images/power bi 2.png?raw=true"/>
-<img src="images/power bi 3.png?raw=true"/>
-<img src="images/power bi 4.png?raw=true"/>
+<img src="images/power bi 2.PNG?raw=true"/>
+<img src="images/power bi 3.PNG?raw=true"/>
+<img src="images/power bi 4.PNG?raw=true"/>
 
 3. Load to the POSTGRES NorthWind tables 
-<img src="images/power bi 5.png?raw=true"/>
-<img src="images/power bi 6.png?raw=true"/>
+<img src="images/power bi 5.PNG?raw=true"/>
+<img src="images/power bi 6.PNG?raw=true"/>
 
 - [X] Deploy an AWS RDS POSTGRES INSTANCE using TERRAFORM (Free Tier)
 - [X] Check connection to the POSTGRES INSTANCE using PGADMIN 
