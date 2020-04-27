@@ -23,6 +23,7 @@ The steps we will follow are:
   #### AWS RDS in a nutshell
   AWS provides a relational database cloud service called RDS (Relational Database Service). 
   This means that database instances can be deployed and managed in the cloud by AWS (https://aws.amazon.com/rds/)
+
   Currently, AWS supports multiple flavors of databases, namely:
   * Aurora
   * Postgres SQL
@@ -30,6 +31,8 @@ The steps we will follow are:
   * MariaDB
   * Oracle
   * Microsodft SQl server
+
+  <img src="images/RDS supported databases.PNG?raw=true"/>
 
   #### AWS RDS free tier
   AWS provides an RDS free tier service for small cloud instances and open source databases such as MySQL, 
@@ -146,7 +149,7 @@ reference: https://tech.instacart.com/terraforming-rds-part-1-7cc78f92b24d?gi=bb
   #### Identify the AWS RDS POSTGRES database host information
   You can use AWS RDS console to check for the host connection information
 
-  <img src="images/AWS RDS Console.PNG" height="256" width="256">
+  <img src="images/AWS RDS Console.PNG">
 
   #### Connect to the newly created AWS RDS POSTGRES instance 
   1. Use pgAdmin to connect to our database instance - create a server
