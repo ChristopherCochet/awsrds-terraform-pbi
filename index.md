@@ -15,10 +15,10 @@ The steps we will follow are:
 
 ## 1. Deploy an AWS RDS POSTGRES INSTANCE using TERRAFORM (Free Tier)
 
-  ### Pre-requisite
-  * An AWS Account set-up (including IAM credentials)
-  * Be familiar with AWS RDS and VPC settings
-  * Latest version of TERRAFORM CLI installed and set-up on your local machine (https://www.terraform.io/downloads.html)
+### Pre-requisite
+* An AWS Account set-up (including IAM credentials)
+* Be familiar with AWS RDS and VPC settings
+* Latest version of TERRAFORM CLI installed and set-up on your local machine (https://www.terraform.io/downloads.html)
 
   ### AWS RDS in a nutshell
   AWS provides a relational database cloud service called RDS (Relational Database Service). 
@@ -138,7 +138,7 @@ reference: https://tech.instacart.com/terraforming-rds-part-1-7cc78f92b24d?gi=bb
   Now that we have a POSTGRES database instance running in AWS, we will be checking we have proper access 
   to the database from our local environment.
 
-### Pre-requisite
+  ### Pre-requisite
   * pgAdmin installed (https://www.pgadmin.org/)
 
   ### PGADMIN database in a nutshell
@@ -192,7 +192,6 @@ reference: https://tech.instacart.com/terraforming-rds-part-1-7cc78f92b24d?gi=bb
   PSQL lets user create, query, update and delete POSTGRES tables and databases through the command line. 
 
 ### Create the NorthWind database using PSQL
-
 1. Deploy the NorthWind database sql script
 
    - Create the NorthWind database
