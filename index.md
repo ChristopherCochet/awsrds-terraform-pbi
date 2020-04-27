@@ -80,16 +80,16 @@ The steps we will follow are:
     }
   ```
 
-  A few key RDS settings to understand:
-  * Replace *mypostgrespassword* with a strong password to access the PostGres databse
-  We use aws AWS' db.t2.micro instance so for the free tier service. Anything else, will trigger AWS costs.
-  * Since I am based in New Zealand, I have am setting up the instance in the ap-southeast-2 region.
-  * I am making the database and the data accessible from any IP by setting the publicly_accessible setting to true. 
-  **Beware ! This means that the instance is visible and can be reached anywhere in the word (ie. without having to hop 
-  through a proxy AWS EC2 instance for security).**
-  * The postgres database user login and associated passwords are set in the 'username' and 'password' s
-  ettings in the terraform files.
-  * The postgres database verison is set in the engine_version (11.5 in this case).
+    A few key RDS settings to understand:
+      - Replace *mypostgrespassword* with a strong password to access the PostGres databse
+      We use aws AWS' db.t2.micro instance so for the free tier service. Anything else, will trigger AWS costs.
+      - Since I am based in New Zealand, I have am setting up the instance in the ap-southeast-2 region.
+      - I am making the database and the data accessible from any IP by setting the publicly_accessible setting to true. 
+      **Beware ! This means that the instance is visible and can be reached anywhere in the word (ie. without having to hop 
+      through a proxy AWS EC2 instance for security).**
+      - The postgres database user login and associated passwords are set in the 'username' and 'password' s
+      ettings in the terraform files.
+      - The postgres database verison is set in the engine_version (11.5 in this case).
 
   2. Deploy the AWS RDS POSTGRES instance using terraform from the CLI 
 
@@ -245,16 +245,20 @@ reference: https://tech.instacart.com/terraforming-rds-part-1-7cc78f92b24d?gi=bb
 
   2. Connect to the POSTGRES NorthWind database using AWS host connection information
 
+    Use get data and find the Postgres data source in the list 
       <img src="images/power bi 2.PNG?raw=true"/>
-
+    
+    Enter the Postgres RDS host information and database name
       <img src="images/power bi 3.PNG?raw=true"/>
-
+    B
       <img src="images/power bi 4.PNG?raw=true"/>
 
   3. Load to the POSTGRES NorthWind tables 
 
+    Power BI will show the available NorthWind database tables available
       <img src="images/power bi 5.PNG?raw=true"/>
 
+    Select and load the NorthWind database tables 
       <img src="images/power bi 6.PNG?raw=true"/>
 
 #### Tracking our progress
