@@ -145,12 +145,12 @@ reference: https://tech.instacart.com/terraforming-rds-part-1-7cc78f92b24d?gi=bb
   #### Identify the AWS RDS POSTGRES database host information
   You can use AWS RDS console to check for the host connection information
 
-      <img src="images/AWS RDS Console.PNG?raw=true"/>
+    <img src="images/AWS RDS Console.PNG?raw=true"/>
 
   #### Connect to the newly created AWS RDS POSTGRES instance 
     1. Use pgAdmin to connect to our database instance - create a server
 
-        <img src="images/pgAdmin 1.PNG?raw=true"/>
+      <img src="images/pgAdmin 1.PNG?raw=true"/>
 
     2. Use pgAdmin to connect to our database instance - provide host, port, user login and 
     passord connection details
@@ -159,7 +159,7 @@ reference: https://tech.instacart.com/terraforming-rds-part-1-7cc78f92b24d?gi=bb
 
     3. Check that you can see the live connection in the pgAdmin UI
 
-        <img src="images/pgAdmin 3.PNG?raw=true"/>
+      <img src="images/pgAdmin 3.PNG?raw=true"/>
 
 #### Tracking our progress
   - [X] Deploy an AWS RDS POSTGRES INSTANCE using TERRAFORM (Free Tier)
