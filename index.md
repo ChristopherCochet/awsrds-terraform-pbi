@@ -151,16 +151,16 @@ reference: https://tech.instacart.com/terraforming-rds-part-1-7cc78f92b24d?gi=bb
   #### Connect to the newly created AWS RDS POSTGRES instance 
     1. Use pgAdmin to connect to our database instance - create a server
 
-      <img src="images/pgAdmin 1.PNG?raw=true"/>
+    <img src="images/pgAdmin 1.PNG?raw=true"/>
 
     2. Use pgAdmin to connect to our database instance - provide host, port, user login and 
     passord connection details
 
-      <img src="images/pgAdmin 2.PNG?raw=true"/>
+    <img src="images/pgAdmin 2.PNG?raw=true"/>
 
     3. Check that you can see the live connection in the pgAdmin UI
 
-      <img src="images/pgAdmin 3.PNG?raw=true"/>
+    <img src="images/pgAdmin 3.PNG?raw=true"/>
 
 #### Tracking our progress
   - [X] Deploy an AWS RDS POSTGRES INSTANCE using TERRAFORM (Free Tier)
@@ -175,9 +175,13 @@ reference: https://tech.instacart.com/terraforming-rds-part-1-7cc78f92b24d?gi=bb
   We now have a POSTGRES SQL database instance running in AWS, let's deploy the NorthWind 
   relational tables and content to the database.
 
+  > Northwind Traders Access database is a sample database.
+  > The Northwind database contains sales data for a fictitious company called Northwind > Traders, 
+  > which imports and exports specialty foods from around the world.
+
 #### Pre-requisite
   * PSQL CLI installed (http://postgresguide.com/utilities/psql.html)
-  * NorthWind database SQL script downlaoded to your local environment
+  * NorthWind database SQL script downloaded to your local environment
   (https://github.com/pthom/northwind_psql/blob/master/northwind.sql)
 
 #### PSQL database in a nutshell
