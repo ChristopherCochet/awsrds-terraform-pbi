@@ -60,7 +60,7 @@ The steps we will follow are:
   We will be using terraform to deploy our RDS database instance in AWS.
 
   ### Deploy an AWS RDS instance using TERRAFORM
-  1. Create the TERRAFORM configuration file to deploy the AWS RDS POSTGRES instance (file should have a .tf extension) 
+1. Create the TERRAFORM configuration file to deploy the AWS RDS POSTGRES instance (file should have a .tf extension) 
 
   The following provides the minimum configuration settings to dploy an AWS RDS POSTGRES free tier instance: 
   ```
@@ -94,7 +94,7 @@ The steps we will follow are:
     ettings in the terraform files.
   * The postgres database verison is set in the engine_version (11.5 in this case).
 
-  2. Deploy the AWS RDS POSTGRES instance using terraform from the CLI 
+2. Deploy the AWS RDS POSTGRES instance using terraform from the CLI 
 
       - Initialize TERRAFORM using the following command: ``` terraform init ```
 
