@@ -146,7 +146,7 @@ reference: https://tech.instacart.com/terraforming-rds-part-1-7cc78f92b24d?gi=bb
   #### Identify the AWS RDS POSTGRES database host information
   You can use AWS RDS console to check for the host connection information
 
-  <img src="images/AWS RDS Console.PNG" height="24" width="48">
+  <img src="images/AWS RDS Console.PNG" height="256" width="256">
 
   #### Connect to the newly created AWS RDS POSTGRES instance 
   1. Use pgAdmin to connect to our database instance - create a server
