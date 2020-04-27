@@ -21,8 +21,8 @@ The steps we will follow are:
     * Latest version of TERRAFORM CLI installed and set-up on your local machine (https://www.terraform.io/downloads.html)
 
   #### AWS RDS in a nutshell
-    AWS provides a relational database cloud service called RDS (Relational Database Service). This means that database instances 
-    can be deployed and managed in the cloud by AWS (https://aws.amazon.com/rds/)
+    AWS provides a relational database cloud service called RDS (Relational Database Service). 
+    This means that database instances can be deployed and managed in the cloud by AWS (https://aws.amazon.com/rds/)
     Currently, AWS supports multiple flavors of databases, namely:
     * Aurora
     * Postgres SQL
@@ -34,22 +34,24 @@ The steps we will follow are:
   #### AWS RDS free tier
     AWS provides an RDS free tier service for small cloud instances and open source databases such as MySQL, 
     Postgres (https://aws.amazon.com/rds/free/). <br/>
-    *750 hours of Amazon RDS Single-AZ db.t2.micro Instance usage running MySQL, MariaDB, PostgreSQL, Oracle BYOL or SQL Server 
-    (running SQL Server Express Edition) – enough hours to run a DB Instance continuously each month*
+    *750 hours of Amazon RDS Single-AZ db.t2.micro Instance usage running MySQL, MariaDB, PostgreSQL, Oracle BYOL 
+    or SQL Server  (running SQL Server Express Edition) – enough hours to run a DB Instance continuously each month*
 
     We will be using a free tier RDS database instance.
 
   #### POSTGRES database in a nutshell
     PostgreSQL is a general purpose and object-relational database management system. It is open-source, 
-    free and used by many well know companies including uber, netflix, and spotify (https://www.postgresql.org/about/press/faq/)
+    free and used by many well know companies including uber, netflix, and spotify
+    (https://www.postgresql.org/about/press/faq/)
 
   We will be deploying a Postgres database instance.
 
   #### TERRAFORM in a nutshell
     Terraform is a tool for building, changing, and versioning cloud infrastructure services efficiently. 
-    It is cloud vendor agnostic (i.e. supports Azure, AWS, GCP etc.) and uses infrastrcuture as Code (IAC) to deploy and manage 
-    most cloud services (https://www.terraform.io/intro/index.html). Essentially, terraform lets users set-up cloud services 
-    using configuration files which are used to deploy, track, update or shutdown specified cloud services.
+    It is cloud vendor agnostic (i.e. supports Azure, AWS, GCP etc.) and uses infrastrcuture as Code (IAC) 
+    to deploy and manage  most cloud services (https://www.terraform.io/intro/index.html). 
+    Essentially, terraform lets users set-up cloud services using configuration files which are used to deploy, 
+    track, update or shutdown specified cloud services.
 
     We will be using terraform to deploy our RDS database instance in AWS.
 
@@ -94,20 +96,20 @@ The steps we will follow are:
 
       - Check what TERRAFORM is planning to deploy in AWS using the following command: ``` terraform plan ```
 
-      <img src="images/terraform-plan.PNG?raw=true"/>
+        <img src="images/terraform-plan.PNG?raw=true"/>
 
       - Deploy our RDS POSTGRES instance in AWS using: ``` terraform deploy ```
 
-      <img src="images/terraform-apply.PNG?raw=true"/>
+        <img src="images/terraform-apply.PNG?raw=true"/>
 
       - It looks good, an instance seems to have been created without any error !
 
-      <img src="images/terraform-apply2.PNG?raw=true"/>
+        <img src="images/terraform-apply2.PNG?raw=true"/>
 
       - Validate manually that TERRAFORM has properly deployed the RDS POSTGRES instance in AWS by 
       checking into the AWS RDS online web console:
 
-      <img src="images/aws-rds-instance check.png?raw=true"/>
+        <img src="images/aws-rds-instance check.png?raw=true"/>
 
   **Remember to release the RDS instance once you are finished to avoid running out of AWS free tier resource !**
     Use the following command to shut down the database instance : ``` terraform destroy ```
@@ -138,24 +140,24 @@ reference: https://tech.instacart.com/terraforming-rds-part-1-7cc78f92b24d?gi=bb
     to POSTGRES databases and facilitates the creation, maintenance, querying and use of 
     database objects and tables. 
 
-  #### Identify the AWS RDS POstgres database host information
+  #### Identify the AWS RDS POSTGRES database host information
     You can use AWS RDS console to check for the host connection information
 
-  <img src="images/AWS RDS Console.PNG?raw=true"/>
+        <img src="images/AWS RDS Console.PNG?raw=true"/>
 
   #### Connect to the newly created AWS RDS POSTGRES instance 
     1. Use pgAdmin to connect to our database instance - create a server
 
-      <img src="images/pgAdmin 1.PNG?raw=true"/>
+        <img src="images/pgAdmin 1.PNG?raw=true"/>
 
     2. Use pgAdmin to connect to our database instance - provide host, port, user login and 
     passord connection details
 
-      <img src="images/pgAdmin 2.PNG?raw=true"/>
+        <img src="images/pgAdmin 2.PNG?raw=true"/>
 
     3. Check that you can see the live connection in the pgAdmin UI
 
-      <img src="images/pgAdmin 3.PNG?raw=true"/>
+        <img src="images/pgAdmin 3.PNG?raw=true"/>
 
 #### Tracking our progress
   - [X] Deploy an AWS RDS POSTGRES INSTANCE using TERRAFORM (Free Tier)
@@ -188,24 +190,24 @@ reference: https://tech.instacart.com/terraforming-rds-part-1-7cc78f92b24d?gi=bb
    psql -h dsdj-postgres-db.clpvihbunw2c.ap-southeast-2.rds.amazonaws.com -U postgres -p 5432 -c "CREATE DATABASE \"NorthWind\";"
    ```
 
-   <img src="images/PSQL 1.PNG?raw=true"/>
+      <img src="images/PSQL 1.PNG?raw=true"/>
 
    - Create the NorthWind tables
    ```
    psql -h dsdj-postgres-db.clpvihbunw2c.ap-southeast-2.rds.amazonaws.com -U postgres -p 5432 -d NorthWind < northwind.sql
    ```
 
-   <img src="images/PSQL 2.PNG?raw=true"/>
+      <img src="images/PSQL 2.PNG?raw=true"/>
 
 2. Check that the NorthWind database was properly created with PGADMIN or PSQL
 
    - PGADMIN 
 
-   <img src="images/pgAdmin 4.PNG?raw=true"/>
+      <img src="images/pgAdmin 4.PNG?raw=true"/>
 
    - PSQL, Once connected to the Northwind Database use: ``` \d ```
 
-   <img src="images/PSQL 3.PNG?raw=true"/>
+      <img src="images/PSQL 3.PNG?raw=true"/>
 
 
 #### Tracking our progress
@@ -232,21 +234,21 @@ reference: https://tech.instacart.com/terraforming-rds-part-1-7cc78f92b24d?gi=bb
 
   1. Launch Power BI Desktop
 
-    <img src="images/power bi 1.PNG?raw=true"/>
+      <img src="images/power bi 1.PNG?raw=true"/>
 
   2. Connect to the POSTGRES NorthWind database using AWS host connection information
 
-    <img src="images/power bi 2.PNG?raw=true"/>
+      <img src="images/power bi 2.PNG?raw=true"/>
 
-    <img src="images/power bi 3.PNG?raw=true"/>
+      <img src="images/power bi 3.PNG?raw=true"/>
 
-    <img src="images/power bi 4.PNG?raw=true"/>
+      <img src="images/power bi 4.PNG?raw=true"/>
 
   3. Load to the POSTGRES NorthWind tables 
 
-    <img src="images/power bi 5.PNG?raw=true"/>
+      <img src="images/power bi 5.PNG?raw=true"/>
 
-    <img src="images/power bi 6.PNG?raw=true"/>
+      <img src="images/power bi 6.PNG?raw=true"/>
 
 #### Tracking our progress
  - [X] Deploy an AWS RDS POSTGRES INSTANCE using TERRAFORM (Free Tier)
