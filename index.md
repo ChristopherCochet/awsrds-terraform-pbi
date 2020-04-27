@@ -1,4 +1,4 @@
-## Setting-up AWS RDS Postgres, Deploy a databse and build a power Bi dashboard 
+## Setting-up AWS RDS Postgres, Deploy a database and build a power Bi dashboard 
 
 **Project description:** This is a guided project in which we describe concisely how to set-up an aws rds 
 postgres database instance using terraform, deploy a databse and connect to it to build a simple Power BI dashboard.
@@ -34,8 +34,8 @@ The steps we will follow are:
   #### AWS RDS free tier
   AWS provides an RDS free tier service for small cloud instances and open source databases such as MySQL, 
   Postgres (https://aws.amazon.com/rds/free/)
-  *750 hours of Amazon RDS Single-AZ db.t2.micro Instance usage running MySQL, MariaDB, PostgreSQL, Oracle BYOL 
-  or SQL Server  (running SQL Server Express Edition) – enough hours to run a DB Instance continuously each month*
+  > *750 hours of Amazon RDS Single-AZ db.t2.micro Instance usage running MySQL, MariaDB, PostgreSQL, Oracle BYOL 
+  > or SQL Server  (running SQL Server Express Edition) – enough hours to run a DB Instance continuously each month*
 
   We will be using a free tier RDS database instance.
 
@@ -50,6 +50,7 @@ The steps we will follow are:
   Terraform is a tool for building, changing, and versioning cloud infrastructure services efficiently. 
   It is cloud vendor agnostic (i.e. supports Azure, AWS, GCP etc.) and uses infrastrcuture as Code (IAC) 
   to deploy and manage  most cloud services (https://www.terraform.io/intro/index.html). 
+  
   Essentially, terraform lets users set-up cloud services using configuration files which are used to deploy, 
   track, update or shutdown specified cloud services.
 
@@ -59,7 +60,7 @@ The steps we will follow are:
   1. Create the TERRAFORM configuration file to deploy the AWS RDS POSTGRES instance (file should have a .tf extension) 
 
   The following provides the minimum configuration settings to dploy an AWS RDS POSTGRES free tier instance: 
-    ```
+  ```
     provider "aws" {
       region = "ap-southeast-2"
     }
@@ -77,15 +78,15 @@ The steps we will follow are:
       username             = "postgres"
       apply_immediately = true
     }
-    ```
+  ```
 
   A few key RDS settings to understand:
   * Replace *mypostgrespassword* with a strong password to access the PostGres databse
   We use aws AWS' db.t2.micro instance so for the free tier service. Anything else, will trigger AWS costs.
   * Since I am based in New Zealand, I have am setting up the instance in the ap-southeast-2 region.
   * I am making the database and the data accessible from any IP by setting the publicly_accessible setting to true. 
-  Beware ! This means that the instance is visible and can be reached anywhere in the word (ie. without having to hop 
-  through a proxy AWS EC2 instance for security).
+  **Beware ! This means that the instance is visible and can be reached anywhere in the word (ie. without having to hop 
+  through a proxy AWS EC2 instance for security).**
   * The postgres database user login and associated passwords are set in the 'username' and 'password' s
   ettings in the terraform files.
   * The postgres database verison is set in the engine_version (11.5 in this case).
