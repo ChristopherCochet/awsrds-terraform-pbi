@@ -138,7 +138,7 @@ reference: https://tech.instacart.com/terraforming-rds-part-1-7cc78f92b24d?gi=bb
   Now that we have a POSTGRES database instance running in AWS, we will be checking we have proper access 
   to the database from our local environment.
 
-  ### Pre-requisite
+### Pre-requisite
   * pgAdmin installed (https://www.pgadmin.org/)
 
   ### PGADMIN database in a nutshell
