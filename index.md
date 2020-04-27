@@ -13,7 +13,7 @@ The steps we will follow are:
 
 ---
 
-# Deploy an AWS RDS POSTGRES INSTANCE using TERRAFORM (Free Tier)
+# 1. Deploy an AWS RDS POSTGRES INSTANCE using TERRAFORM (Free Tier)
 
   ## Pre-requisite
   * An AWS Account set-up (including IAM credentials)
@@ -133,7 +133,7 @@ reference: https://tech.instacart.com/terraforming-rds-part-1-7cc78f92b24d?gi=bb
 
 ---
 
-# Check the connection to the POSTGRES INSTANCE using PGADMIN 
+# 2. Check the connection to the POSTGRES INSTANCE using PGADMIN 
 
   Now that we have a POSTGRES database instance running in AWS, we will be checking we have proper access 
   to the database from our local environment.
@@ -174,7 +174,7 @@ reference: https://tech.instacart.com/terraforming-rds-part-1-7cc78f92b24d?gi=bb
   - [ ] Deploy the Power BI dashboard
 
 ---
-# Load a relational database (NorthWind) to the RDS POSTGRES instance using PSQL
+# 3. Load a relational database (NorthWind) to the RDS POSTGRES instance using PSQL
   We now have a POSTGRES SQL database instance running in AWS, let's deploy the NorthWind 
   relational tables and content to the database.
 
@@ -229,7 +229,7 @@ reference: https://tech.instacart.com/terraforming-rds-part-1-7cc78f92b24d?gi=bb
 
 ---
 
-# Connect Power BI Desktop to the RDS POSTGRES NorthWind database
+# 4. Connect Power BI Desktop to the RDS POSTGRES NorthWind database
   Now that we have database instance running withthe NorthWind tables loaded, we turn our attention 
   to connecting to the tables with Power BI
 
