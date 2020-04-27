@@ -100,20 +100,20 @@ The steps we will follow are:
 
       - Check what TERRAFORM is planning to deploy in AWS using the following command: ``` terraform plan ```
 
-        <img src="images/terraform-plan.PNG?raw=true"/>
+        <kbd> <img src="images/terraform-plan.PNG?raw=true"/> </kbd>
 
       - Deploy our RDS POSTGRES instance in AWS using: ``` terraform deploy ```
 
-        <img src="images/terraform-apply.PNG?raw=true"/>
+        <kbd> <img src="images/terraform-apply.PNG?raw=true"/> </kbd>
 
       - It looks good, an instance seems to have been created without any error !
 
-        <img src="images/terraform-apply2.PNG?raw=true"/>
+        <kbd> <img src="images/terraform-apply2.PNG?raw=true"/> </kbd>
 
       - Validate manually that TERRAFORM has properly deployed the RDS POSTGRES instance in AWS by 
       checking into the AWS RDS online web console:
 
-        <img src="images/aws-rds-instance check.png?raw=true"/>
+        <kbd> <img src="images/aws-rds-instance check.png?raw=true"/> </kbd>
 
 
 
@@ -149,21 +149,21 @@ reference: https://tech.instacart.com/terraforming-rds-part-1-7cc78f92b24d?gi=bb
   #### Identify the AWS RDS POSTGRES database host information
   You can use AWS RDS console to check for the host connection information
 
-  <img src="images/AWS RDS Console.PNG">
+  <kbd> <img src="images/AWS RDS Console.PNG"> </kbd>
 
   #### Connect to the newly created AWS RDS POSTGRES instance 
   1. Use pgAdmin to connect to our database instance - create a server
 
-  <img src="images/pgAdmin 1.PNG?raw=true"/>
+  <kbd> <img src="images/pgAdmin 1.PNG?raw=true"/> </kbd>
 
   2. Use pgAdmin to connect to our database instance - provide host, port, user login and 
   password connection details
 
-  <img src="images/pgAdmin 2.PNG?raw=true"/>
+  <kbd> <img src="images/pgAdmin 2.PNG?raw=true"/> </kbd>
 
   3. Check that you can see the live connection in the pgAdmin UI
 
-  <img src="images/pgAdmin 3.PNG?raw=true"/>
+  <kbd> <img src="images/pgAdmin 3.PNG?raw=true"/> </kbd>
 
 #### Tracking our progress
   - [X] Deploy an AWS RDS POSTGRES INSTANCE using TERRAFORM (Free Tier)
@@ -200,24 +200,24 @@ reference: https://tech.instacart.com/terraforming-rds-part-1-7cc78f92b24d?gi=bb
    psql -h dsdj-postgres-db.clpvihbunw2c.ap-southeast-2.rds.amazonaws.com -U postgres -p 5432 -c "CREATE DATABASE \"NorthWind\";"
    ```
 
-      <img src="images/PSQL 1.PNG?raw=true"/>
+      <kbd> <img src="images/PSQL 1.PNG?raw=true"/> </kbd>
 
    - Create the NorthWind tables
    ```
    psql -h dsdj-postgres-db.clpvihbunw2c.ap-southeast-2.rds.amazonaws.com -U postgres -p 5432 -d NorthWind < northwind.sql
    ```
 
-      <img src="images/PSQL 2.PNG?raw=true"/>
+      <kbd> <img src="images/PSQL 2.PNG?raw=true"/> </kbd>
 
 2. Check that the NorthWind database was properly created with PGADMIN or PSQL
 
    - PGADMIN 
 
-      <img src="images/pgAdmin 4.PNG?raw=true"/>
+      <kbd> <img src="images/pgAdmin 4.PNG?raw=true"/> </kbd>
 
    - PSQL, Once connected to the Northwind Database use: ``` \d ```
 
-      <img src="images/PSQL 3.PNG?raw=true"/>
+      <kbd> <img src="images/PSQL 3.PNG?raw=true"/> </kbd>
 
 
 #### Tracking our progress
@@ -244,27 +244,27 @@ reference: https://tech.instacart.com/terraforming-rds-part-1-7cc78f92b24d?gi=bb
 
   1. Launch Power BI Desktop
   
-  <img src="images/power bi 1.PNG?raw=true"/>
+  <kbd> <img src="images/power bi 1.PNG?raw=true"/> </kbd>
 
   2. Connect to the POSTGRES NorthWind database using AWS host connection information
 
    - Use get data and find the Postgres data source in the list 
     
-      <img src="images/power bi 2.PNG?raw=true"/>
+      <kbd> <img src="images/power bi 2.PNG?raw=true"/> </kbd>
     
    - Enter the Postgres RDS host information and database name
     
-      <img src="images/power bi 3.PNG?raw=true"/>
+      <kbd> <img src="images/power bi 3.PNG?raw=true"/> </kbd>
     
    - Enter the Postgres RDS host information and database name
     
-      <img src="images/power bi 4.PNG?raw=true"/>
+      <kbd> <img src="images/power bi 4.PNG?raw=true"/> </kbd>
 
   3. Load to the POSTGRES NorthWind tables 
 
    - Power BI will show the available NorthWind database tables available
       
-      <img src="images/power bi 5.PNG?raw=true"/>
+      <kbd> <img src="images/power bi 5.PNG?raw=true"/> </kbd>
 
    - Select and load the NorthWind database tables 
       
