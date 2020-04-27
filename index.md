@@ -1,4 +1,4 @@
-# Setting-up AWS RDS Postgres, Deploy a database and build a power Bi dashboard 
+# Setting-up AWS RDS Postgres, deploy a database and build a power Bi dashboard 
 
 **Project description:** This is a guided project in which we describe concisely how to set-up an aws rds 
 postgres database instance using terraform, deploy a databse and connect to it to build a simple Power BI dashboard.
