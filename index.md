@@ -13,7 +13,7 @@ The steps we will follow are:
 
 ---
 
-# 1. Deploy an AWS RDS POSTGRES INSTANCE using TERRAFORM (Free Tier)
+# Deploy an AWS RDS POSTGRES INSTANCE using TERRAFORM (Free Tier)
 
   ## Pre-requisite
   * An AWS Account set-up (including IAM credentials)
