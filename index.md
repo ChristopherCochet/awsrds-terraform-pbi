@@ -15,10 +15,10 @@ The steps we will follow are:
 
 ## 1. Deploy an AWS RDS POSTGRES INSTANCE using TERRAFORM (Free Tier)
 
-### Pre-requisite
-* An AWS Account set-up (including IAM credentials)
-* Be familiar with AWS RDS and VPC settings
-* Latest version of TERRAFORM CLI installed and set-up on your local machine (https://www.terraform.io/downloads.html)
+  ### Pre-requisite
+  * An AWS Account set-up (including IAM credentials)
+  * Be familiar with AWS RDS and VPC settings
+  * Latest version of TERRAFORM CLI installed and set-up on your local machine (https://www.terraform.io/downloads.html)
 
   ### AWS RDS in a nutshell
   AWS provides a relational database cloud service called RDS (Relational Database Service). 
@@ -59,7 +59,7 @@ The steps we will follow are:
 
   We will be using terraform to deploy our RDS database instance in AWS.
 
-  ### Deploy an AWS RDS instance using TERRFORM
+  ### Deploy an AWS RDS instance using TERRAFORM
   1. Create the TERRAFORM configuration file to deploy the AWS RDS POSTGRES instance (file should have a .tf extension) 
 
   The following provides the minimum configuration settings to dploy an AWS RDS POSTGRES free tier instance: 
