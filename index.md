@@ -268,7 +268,7 @@ reference: https://tech.instacart.com/terraforming-rds-part-1-7cc78f92b24d?gi=bb
 
    - Select and load the NorthWind database tables 
       
-      <img src="images/power bi 6.PNG?raw=true"/>
+      <kbd> <img src="images/power bi 6.PNG?raw=true"/> </kbd>
 
 #### Tracking our progress
  - [X] Deploy an AWS RDS POSTGRES INSTANCE using TERRAFORM (Free Tier)
