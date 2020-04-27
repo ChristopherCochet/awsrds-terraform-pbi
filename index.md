@@ -1,4 +1,4 @@
-## Setting-up AWS RDS Postgres, Deploy a database and build a power Bi dashboard 
+# Setting-up AWS RDS Postgres, Deploy a database and build a power Bi dashboard 
 
 **Project description:** This is a guided project in which we describe concisely how to set-up an aws rds 
 postgres database instance using terraform, deploy a databse and connect to it to build a simple Power BI dashboard.
@@ -13,14 +13,14 @@ The steps we will follow are:
 
 ---
 
-### 1. Deploy an AWS RDS POSTGRES INSTANCE using TERRAFORM (Free Tier)
+## 1. Deploy an AWS RDS POSTGRES INSTANCE using TERRAFORM (Free Tier)
 
-  #### Pre-requisite
+  ### Pre-requisite
   * An AWS Account set-up (including IAM credentials)
   * Be familiar with AWS RDS and VPC settings
   * Latest version of TERRAFORM CLI installed and set-up on your local machine (https://www.terraform.io/downloads.html)
 
-  #### AWS RDS in a nutshell
+  ### AWS RDS in a nutshell
   AWS provides a relational database cloud service called RDS (Relational Database Service). 
   This means that database instances can be deployed and managed in the cloud by AWS (https://aws.amazon.com/rds/)
 
@@ -34,7 +34,7 @@ The steps we will follow are:
 
   <img src="images/RDS supported databases.PNG?raw=true"/>
 
-  #### AWS RDS free tier
+  ### AWS RDS free tier
   AWS provides an RDS free tier service for small cloud instances and open source databases such as MySQL, 
   Postgres (https://aws.amazon.com/rds/free/)
   > *750 hours of Amazon RDS Single-AZ db.t2.micro Instance usage running MySQL, MariaDB, PostgreSQL, Oracle BYOL 
@@ -42,14 +42,14 @@ The steps we will follow are:
 
   We will be using a free tier RDS database instance.
 
-  #### POSTGRES database in a nutshell
+  ### POSTGRES database in a nutshell
   PostgreSQL is a general purpose and object-relational database management system. It is open-source, 
   free and used by many well know companies including uber, netflix, and spotify
   (https://www.postgresql.org/about/press/faq/)
 
   We will be deploying a Postgres database instance.
 
-  #### TERRAFORM in a nutshell
+  ### TERRAFORM in a nutshell
   Terraform is a tool for building, changing, and versioning cloud infrastructure services efficiently. 
   It is cloud vendor agnostic (i.e. supports Azure, AWS, GCP etc.) and uses infrastrcuture as Code (IAC) 
   to deploy and manage  most cloud services (https://www.terraform.io/intro/index.html). 
@@ -59,7 +59,7 @@ The steps we will follow are:
 
   We will be using terraform to deploy our RDS database instance in AWS.
 
-### Deploy an AWS RDS instance using TERRFORM
+  ### Deploy an AWS RDS instance using TERRFORM
   1. Create the TERRAFORM configuration file to deploy the AWS RDS POSTGRES instance (file should have a .tf extension) 
 
   The following provides the minimum configuration settings to dploy an AWS RDS POSTGRES free tier instance: 
@@ -121,7 +121,7 @@ The steps we will follow are:
     Use the following command to shut down the database instance : ``` terraform destroy ```
 
 
-#### Tracking our progress
+### Tracking our progress
   - [X] Deploy an AWS RDS POSTGRES INSTANCE using TERRAFORM (Free Tier)
   - [ ] Check connection to the POSTGRES INSTANCE using PGADMIN 
   - [ ] Load a relational database (NorthWind) to the RDS POSTGRES instance using PSQL
@@ -133,25 +133,25 @@ reference: https://tech.instacart.com/terraforming-rds-part-1-7cc78f92b24d?gi=bb
 
 ---
 
-### 2. Check the connection to the POSTGRES INSTANCE using PGADMIN 
+## 2. Check the connection to the POSTGRES INSTANCE using PGADMIN 
 
   Now that we have a POSTGRES database instance running in AWS, we will be checking we have proper access 
   to the database from our local environment.
 
-  #### Pre-requisite
+  ### Pre-requisite
   * pgAdmin installed (https://www.pgadmin.org/)
 
-  #### PGADMIN database in a nutshell
+  ### PGADMIN database in a nutshell
   pgAdmin is POSTGRES SQL administration tool. It is a web based gaphical user interface to connect 
   to POSTGRES databases and facilitates the creation, maintenance, querying and use of 
   database objects and tables. 
 
-  #### Identify the AWS RDS POSTGRES database host information
+  ### Identify the AWS RDS POSTGRES database host information
   You can use AWS RDS console to check for the host connection information
 
   <kbd> <img src="images/AWS RDS Console.PNG"> </kbd>
 
-  #### Connect to the newly created AWS RDS POSTGRES instance 
+  ### Connect to the newly created AWS RDS POSTGRES instance 
   1. Use pgAdmin to connect to our database instance - create a server
 
   <kbd> <img src="images/pgAdmin 1.PNG?raw=true"/> </kbd>
@@ -165,7 +165,7 @@ reference: https://tech.instacart.com/terraforming-rds-part-1-7cc78f92b24d?gi=bb
 
   <kbd> <img src="images/pgAdmin 3.PNG?raw=true"/> </kbd>
 
-#### Tracking our progress
+### Tracking our progress
   - [X] Deploy an AWS RDS POSTGRES INSTANCE using TERRAFORM (Free Tier)
   - [X] Check connection to the POSTGRES INSTANCE using PGADMIN 
   - [ ] Load a relational database (NorthWind) to the RDS POSTGRES instance using PSQL
@@ -174,7 +174,7 @@ reference: https://tech.instacart.com/terraforming-rds-part-1-7cc78f92b24d?gi=bb
   - [ ] Deploy the Power BI dashboard
 
 ---
-### 3. Load a relational database (NorthWind) to the RDS POSTGRES instance using PSQL
+## 3. Load a relational database (NorthWind) to the RDS POSTGRES instance using PSQL
   We now have a POSTGRES SQL database instance running in AWS, let's deploy the NorthWind 
   relational tables and content to the database.
 
@@ -182,16 +182,16 @@ reference: https://tech.instacart.com/terraforming-rds-part-1-7cc78f92b24d?gi=bb
   > The Northwind database contains sales data for a fictitious company called Northwind > Traders, 
   > which imports and exports specialty foods from around the world.
 
-#### Pre-requisite
+### Pre-requisite
   * PSQL CLI installed (http://postgresguide.com/utilities/psql.html)
   * NorthWind database SQL script downloaded to your local environment
   (https://github.com/pthom/northwind_psql/blob/master/northwind.sql)
 
-#### PSQL database in a nutshell
+### PSQL database in a nutshell
   PSQL is the interactive CLI to interact with Postgres databases. 
   PSQL lets user create, query, update and delete POSTGRES tables and databases through the command line. 
 
-#### Create the NorthWind database using PSQL
+### Create the NorthWind database using PSQL
 
 1. Deploy the NorthWind database sql script
 
@@ -220,7 +220,7 @@ reference: https://tech.instacart.com/terraforming-rds-part-1-7cc78f92b24d?gi=bb
       <kbd> <img src="images/PSQL 3.PNG?raw=true"/> </kbd>
 
 
-#### Tracking our progress
+### Tracking our progress
   - [X] Deploy an AWS RDS POSTGRES INSTANCE using TERRAFORM (Free Tier)
   - [X] Check connection to the POSTGRES INSTANCE using PGADMIN 
   - [X] Load a relational database (NorthWind) to the RDS POSTGRES instance using PSQL
@@ -234,10 +234,10 @@ reference: https://tech.instacart.com/terraforming-rds-part-1-7cc78f92b24d?gi=bb
   Now that we have database instance running withthe NorthWind tables loaded, we turn our attention 
   to connecting to the tables with Power BI
 
-#### Pre-requisite
+### Pre-requisite
   * Power BI desktop installed (https://powerbi.microsoft.com/en-us/downloads/)
 
-#### Power BI in a nutshell
+### Power BI in a nutshell
   Power BI is an ETL and visualization Microsoft tool for business analytics and reporting. 
   It provides interactive visualizations and business intelligence capabilitieto create reports 
   and dashboards which can be deployed in Microsoft and Azure's environment. 
@@ -270,7 +270,7 @@ reference: https://tech.instacart.com/terraforming-rds-part-1-7cc78f92b24d?gi=bb
       
       <kbd> <img src="images/power bi 6.PNG?raw=true"/> </kbd>
 
-#### Tracking our progress
+### Tracking our progress
  - [X] Deploy an AWS RDS POSTGRES INSTANCE using TERRAFORM (Free Tier)
  - [X] Check connection to the POSTGRES INSTANCE using PGADMIN 
  - [X] Load a relational database (NorthWind) to the RDS POSTGRES instance using PSQL
