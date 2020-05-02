@@ -230,7 +230,7 @@ reference: https://tech.instacart.com/terraforming-rds-part-1-7cc78f92b24d?gi=bb
 ---
 
 # 4. Connect Power BI Desktop to the RDS POSTGRES NorthWind database
-  Now that we have database instance running withthe NorthWind tables loaded, we turn our attention 
+  Now that we have database instance running with the NorthWind tables loaded, we turn our attention 
   to connecting to the tables with Power BI
 
 ## Pre-requisite
@@ -278,4 +278,65 @@ reference: https://tech.instacart.com/terraforming-rds-part-1-7cc78f92b24d?gi=bb
  - [ ] Deploy the Power BI dashboard
 
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+# 5. Build a Simple Power BI Dashboard using the NorthWind dabase
+  We've connected to the NrthWind database with Power BI and now are going to build a simple set of graphs for our dashboard.
+
+  The NorthWind database includes 14 tables and the their relationships - below are a few key tables:
+  * Suppliers: Suppliers and vendors of Northwind
+  * Customers: Customers who buy products from Northwind
+  * Employees: Employee details of Northwind traders
+  * Products: Product information
+  * Shippers: The details of the shippers who ship the products from the traders to the end-customers
+  * Orders and Order_Details: Sales Order transactions taking place between the customers & the company
+
+## Pre-requisite
+  * Northwind database and table relationships (https://docs.yugabyte.com/latest/sample-data/northwind)
+  * NorthWind's entity relationship diagram is shown below:
+  
+  <kbd> <img src="images/northwind-er-diagram.png?raw=true"/> </kbd>
+
+
+## Power BI Modeling and Dashboard Creation
+  Once the database table are imported in Power BI, the tool with automatically identify the table relationships 
+
+  1. Check the table relationships in Power BI
+  
+  <kbd> <img src="images/power bi 7.PNG?raw=true"/> </kbd>
+
+  2. Build charts and graphs for the dashboard (examples below)
+
+   - NorthWind products overview  
+    
+      <kbd> <img src="images/power bi 8.PNG?raw=true"/> </kbd>
+    
+   - NorthWind products revenue overview
+    
+      <kbd> <img src="images/power bi 9.PNG?raw=true"/> </kbd>
+    
+   - NorthWind customers overview
+    
+      <kbd> <img src="images/power bi 10.PNG?raw=true"/> </kbd>
+
+## Tracking our progress
+ - [X] Deploy an AWS RDS POSTGRES INSTANCE using TERRAFORM (Free Tier)
+ - [X] Check connection to the POSTGRES INSTANCE using PGADMIN 
+ - [X] Load a relational database (NorthWind) to the RDS POSTGRES instance using PSQL
+ - [X] Connect Power BI Desktop to the RDS POSTGRES NorthWind database
+ - [X] Build a Simple Power BI Dashboard using the NorthWind dabase
+ - [ ] Deploy the Power BI dashboard
+
+
+## Deploy the Power BI dashboard
+  We are done, we now simply need to publish the dashboard to a Power BI Workspace and start analyzing !
+  
+  <kbd> <img src="images/power bi 11.PNG?raw=true"/> </kbd>
+
+  <kbd> <img src="images/power bi.gif?raw=true"/> </kbd>
+
+## Tracking our progress
+ - [X] Deploy an AWS RDS POSTGRES INSTANCE using TERRAFORM (Free Tier)
+ - [X] Check connection to the POSTGRES INSTANCE using PGADMIN 
+ - [X] Load a relational database (NorthWind) to the RDS POSTGRES instance using PSQL
+ - [X] Connect Power BI Desktop to the RDS POSTGRES NorthWind database
+ - [X] Build a Simple Power BI Dashboard using the NorthWind dabase
+ - [X] Deploy the Power BI dashboard
