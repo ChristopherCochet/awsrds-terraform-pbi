@@ -3,6 +3,8 @@
 **Project description:** This is a guided project in which we describe concisely how to set-up an aws rds 
 postgres database instance using terraform, deploy a databse and connect to it to build a simple Power BI dashboard.
 
+<kbd> <img src="images/power bi.gif?raw=true"/> </kbd>
+
 The steps we will follow are:
   - [ ] Deploy an AWS RDS POSTGRES INSTANCE using TERRAFORM (Free Tier)
   - [ ] Check connection to the POSTGRES INSTANCE using PGADMIN 
@@ -121,7 +123,7 @@ The steps we will follow are:
     Use the following command to shut down the database instance : ``` terraform destroy ```
 
 
-## Tracking our progress
+### Tracking our progress
   - [X] Deploy an AWS RDS POSTGRES INSTANCE using TERRAFORM (Free Tier)
   - [ ] Check connection to the POSTGRES INSTANCE using PGADMIN 
   - [ ] Load a relational database (NorthWind) to the RDS POSTGRES instance using PSQL
@@ -165,7 +167,7 @@ reference: https://tech.instacart.com/terraforming-rds-part-1-7cc78f92b24d?gi=bb
 
   <kbd> <img src="images/pgAdmin 3.PNG?raw=true"/> </kbd>
 
-## Tracking our progress
+### Tracking our progress
   - [X] Deploy an AWS RDS POSTGRES INSTANCE using TERRAFORM (Free Tier)
   - [X] Check connection to the POSTGRES INSTANCE using PGADMIN 
   - [ ] Load a relational database (NorthWind) to the RDS POSTGRES instance using PSQL
@@ -219,7 +221,7 @@ reference: https://tech.instacart.com/terraforming-rds-part-1-7cc78f92b24d?gi=bb
       <kbd> <img src="images/PSQL 3.PNG?raw=true"/> </kbd>
 
 
-## Tracking our progress
+### Tracking our progress
   - [X] Deploy an AWS RDS POSTGRES INSTANCE using TERRAFORM (Free Tier)
   - [X] Check connection to the POSTGRES INSTANCE using PGADMIN 
   - [X] Load a relational database (NorthWind) to the RDS POSTGRES instance using PSQL
@@ -236,7 +238,7 @@ reference: https://tech.instacart.com/terraforming-rds-part-1-7cc78f92b24d?gi=bb
 ## Pre-requisite
   * Power BI desktop installed (https://powerbi.microsoft.com/en-us/downloads/)
 
-## Power BI in a nutshell
+### Power BI in a nutshell
   Power BI is an ETL and visualization Microsoft tool for business analytics and reporting. 
   It provides interactive visualizations and business intelligence capabilitieto create reports 
   and dashboards which can be deployed in Microsoft and Azure's environment. 
@@ -269,7 +271,7 @@ reference: https://tech.instacart.com/terraforming-rds-part-1-7cc78f92b24d?gi=bb
       
       <kbd> <img src="images/power bi 6.PNG?raw=true"/> </kbd>
 
-## Tracking our progress
+### Tracking our progress
  - [X] Deploy an AWS RDS POSTGRES INSTANCE using TERRAFORM (Free Tier)
  - [X] Check connection to the POSTGRES INSTANCE using PGADMIN 
  - [X] Load a relational database (NorthWind) to the RDS POSTGRES instance using PSQL
@@ -317,7 +319,7 @@ reference: https://tech.instacart.com/terraforming-rds-part-1-7cc78f92b24d?gi=bb
     
       <kbd> <img src="images/power bi 10.PNG?raw=true"/> </kbd>
 
-## Tracking our progress
+### Tracking our progress
  - [X] Deploy an AWS RDS POSTGRES INSTANCE using TERRAFORM (Free Tier)
  - [X] Check connection to the POSTGRES INSTANCE using PGADMIN 
  - [X] Load a relational database (NorthWind) to the RDS POSTGRES instance using PSQL
@@ -330,8 +332,6 @@ reference: https://tech.instacart.com/terraforming-rds-part-1-7cc78f92b24d?gi=bb
   We are done, we now simply need to publish the dashboard to a Power BI Workspace and start analyzing !
   
   <kbd> <img src="images/power bi 11.PNG?raw=true"/> </kbd>
-
-  <kbd> <img src="images/power bi.gif?raw=true"/> </kbd>
 
 ## Tracking our progress
  - [X] Deploy an AWS RDS POSTGRES INSTANCE using TERRAFORM (Free Tier)
