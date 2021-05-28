@@ -104,7 +104,7 @@ The steps we will follow are:
 
         <kbd> <img src="images/terraform-plan.PNG?raw=true"/> </kbd>
 
-      - Deploy our RDS POSTGRES instance in AWS using: ``` terraform deploy ```
+      - Deploy our RDS POSTGRES instance in AWS using: ``` terraform apply ```
 
         <kbd> <img src="images/terraform-apply.PNG?raw=true"/> </kbd>
 
